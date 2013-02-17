@@ -1,7 +1,7 @@
 # FinalStore API
 
-FinalStore is a RESTful API for typical online store.
-It's still in development. Actually in the first stage which is writing documentation.
+FinalStore is a RESTful API of typical online store.
+It's still in development. Actually in the first stage - which is writing the documentation.
 It will be written in [node.js](http://nodejs.org/).
 For handling http it will use [express.js](http://expressjs.com/) framework.
 
