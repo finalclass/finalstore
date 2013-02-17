@@ -385,7 +385,7 @@ Cache-Control: must-revalidate
 
 #### user related possible error responses
 
-```json
+```
 HTTP/1.1 404 Not Found
 Server: FinalStore
 Date: Sun, 17 Feb 2013 19:27:12 GMT
@@ -555,7 +555,7 @@ Reads specific product from the cart
 
 #### example response data
 
-```json
+```
 HTTP/1.1 200 OK
 Server: FinalStore
 Date: Sun, 17 Feb 2013 19:20:19 GMT
@@ -574,7 +574,7 @@ Cache-Control: must-revalidate
 
 #### possible error responses
 
-```json
+```
 HTTP/1.1 404 Not Found
 Server: FinalStore
 Date: Sun, 17 Feb 2013 19:27:12 GMT
@@ -597,7 +597,7 @@ You can specify which attributes you want
 
 #### example response data
 
-```json
+```
 HTTP/1.1 200 OK
 Server: FinalStore
 Date: Sun, 17 Feb 2013 19:20:19 GMT
@@ -613,7 +613,7 @@ Cache-Control: must-revalidate
 
 #### possible error responses
 
-```json
+```
 HTTP/1.1 404 Not Found
 Server: FinalStore
 Date: Sun, 17 Feb 2013 19:27:12 GMT
@@ -660,7 +660,7 @@ Cache-Control: must-revalidate
 
 #### possible error responses
 
-```json
+```
 HTTP/1.1 400 Bad Request
 Server: FinalStore
 Date: Sun, 17 Feb 2013 19:27:12 GMT
@@ -672,7 +672,7 @@ Cache-Control: must-revalidate
 ```
 
 
-```json
+```
 HTTP/1.1 400 Bad Request
 Server: FinalStore
 Date: Sun, 17 Feb 2013 19:27:12 GMT
@@ -684,7 +684,7 @@ Cache-Control: must-revalidate
 ```
 
 
-```json
+```
 HTTP/1.1 500 Internal Server Error
 Server: FinalStore
 Date: Sun, 17 Feb 2013 19:27:12 GMT
@@ -731,7 +731,7 @@ Cache-Control: must-revalidate
 
 #### possible error responses
 
-```json
+```
 HTTP/1.1 400 Bad Request
 Server: FinalStore
 Date: Sun, 17 Feb 2013 19:27:12 GMT
@@ -743,7 +743,7 @@ Cache-Control: must-revalidate
 ```
 
 
-```json
+```
 HTTP/1.1 400 Bad Request
 Server: FinalStore
 Date: Sun, 17 Feb 2013 19:27:12 GMT
@@ -755,7 +755,7 @@ Cache-Control: must-revalidate
 ```
 
 
-```json
+```
 HTTP/1.1 500 Internal Server Error
 Server: FinalStore
 Date: Sun, 17 Feb 2013 19:27:12 GMT
@@ -793,7 +793,7 @@ Cache-Control: must-revalidate
 
 #### possible error responses
 
-```json
+```
 HTTP/1.1 400 Bad Request
 Server: FinalStore
 Date: Sun, 17 Feb 2013 19:27:12 GMT
