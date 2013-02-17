@@ -1,0 +1,8 @@
+{
+    "name": "FinalStore",
+    "version": "v0.0.0",
+    "private": false,
+    "dependencies": {
+        "express": "*",
+    }
+}
