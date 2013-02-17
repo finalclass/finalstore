@@ -1,9 +1,11 @@
 # FinalStore API
 
-FinalStore jest interfejsem API dla typowego sklepu internetowego. 
-Jest napisany w technologii [node.js](http://nodejs.org/) 
-zbudowany z wykorzystaniem frameworka [express.js](http://expressjs.com/).
-FinalStore jest projektem OpenSource na licencji MIT lub GPL (do wyboru).
+FinalStore is a RESTful API for typical online store.
+It is written in [node.js](http://nodejs.org/).
+For handling http it uses [express.js](http://expressjs.com/) framework.
+
+FinalStore is an OpenSource project, 
+distributed under **MIT** or **GPL** license (you can choose which license better suits your needs).
 
 ## Generally about the API
 
@@ -13,7 +15,7 @@ Let's make first request.
 
 Response for this request should look like that:
 
-```ini
+```
 HTTP/1.1 200 OK
 Server: FinalStore
 Date: Wed, 13 Feb 2013 20:54:56 GMT
@@ -59,7 +61,7 @@ you could make a request like that:
 
 Which could produce the response:
 
-```ini
+```
 HTTP/1.1 200 OK
 Server: FinalStore
 Date: Wed, 13 Feb 2013 20:54:56 GMT

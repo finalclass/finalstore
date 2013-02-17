@@ -1,9 +1,11 @@
 # FinalStore API
 
-FinalStore jest interfejsem API dla typowego sklepu internetowego. 
-Jest napisany w technologii [node.js](http://nodejs.org/) 
-zbudowany z wykorzystaniem frameworka [express.js](http://expressjs.com/).
-FinalStore jest projektem OpenSource na licencji MIT lub GPL (do wyboru).
+FinalStore is a RESTful API for typical online store.
+It is written in [node.js](http://nodejs.org/).
+For handling http it uses [express.js](http://expressjs.com/) framework.
+
+FinalStore is an OpenSource project, 
+distributed under **MIT** or **GPL** license (you can choose which license better suits your needs).
 
 ## Generally about the API
 
@@ -13,7 +15,7 @@ Let's make first request.
 
 Response for this request should look like that:
 
-```ini
+```
 HTTP/1.1 200 OK
 Server: FinalStore
 Date: Wed, 13 Feb 2013 20:54:56 GMT
@@ -59,7 +61,7 @@ you could make a request like that:
 
 Which could produce the response:
 
-```ini
+```
 HTTP/1.1 200 OK
 Server: FinalStore
 Date: Wed, 13 Feb 2013 20:54:56 GMT
@@ -149,7 +151,7 @@ If limit is specified only {limit} users will be returned
 
 #### example response data
 
-```ini
+```
 HTTP/1.1 200 OK
 Transfer-Encoding: chunked
 Server: FinalServer
@@ -190,7 +192,7 @@ Returns the user with given id or 404 if user does not exists
 
 #### example success response
 
-```ini
+```
 HTTP/1.1 200 OK
 Server: FinalServer
 Etag: "1-11f6035f13a60194d8f020b7bd1b1dc1"
@@ -207,7 +209,7 @@ Cache-Control: must-revalidate
 
 #### example failure response
 
-```ini
+```
 HTTP/1.1 404 Not Found
 Server: FinalStore
 Date: Wed, 13 Feb 2013 20:34:36 GMT
@@ -245,7 +247,7 @@ will be created.
 
 #### example response
 
-```ini
+```
 HTTP/1.1 201 Created
 Server: FinalStore
 Location: http://finalstore.net/api/users/1
@@ -275,7 +277,7 @@ modify or create user with id = {id}
 
 #### example response data
 
-```ini
+```
 HTTP/1.1 201 Created
 Server: FinalStore
 Location: http://finalstore.net/api/users/1
@@ -303,7 +305,7 @@ Removes user from a store.
 
 #### example response
 
-```ini
+```
 HTTP/1.1 200 OK
 Server: FinalStore
 Etag: "2-80f57c5f774082b3d3f06ff0471b835e"
@@ -320,7 +322,7 @@ Cache-Control: must-revalidate
 
 #### possible error responses
 
-```ini
+```
 HTTP/1.1 404 Not Found
 Server: FinalStore
 Date: Wed, 13 Feb 2013 20:41:55 GMT
@@ -332,7 +334,7 @@ Cache-Control: must-revalidate
 ```
 
 
-```ini
+```
 HTTP/1.1 401 Unauthorized
 Server: FinalStore
 Date: Wed, 13 Feb 2013 20:41:55 GMT
@@ -344,7 +346,7 @@ Cache-Control: must-revalidate
 ```
 
 
-```ini
+```
 HTTP/1.1 403.3 Forbidden
 Server: FinalStore
 Date: Wed, 13 Feb 2013 20:41:55 GMT
@@ -359,7 +361,7 @@ Cache-Control: must-revalidate
 
 ### ACL related possible errors
 
-```ini
+```
 HTTP/1.1 401 Unauthorized
 Server: FinalStore
 Date: Wed, 13 Feb 2013 20:41:55 GMT
@@ -371,7 +373,7 @@ Cache-Control: must-revalidate
 ```
 
 
-```ini
+```
 HTTP/1.1 403.3 Forbidden
 Server: FinalStore
 Date: Wed, 13 Feb 2013 20:41:55 GMT
@@ -403,7 +405,7 @@ Returns whole cart
 
 ### example response
 
-```ini
+```
 HTTP/1.1 200 OK
 Server: FinalStore
 Date: Sun, 17 Feb 2013 19:20:19 GMT
@@ -443,7 +445,7 @@ Returns total value of all products placed in a shopping cart
 
 #### example response
 
-```ini
+```
 HTTP/1.1 200 OK
 Server: FinalStore
 Date: Sun, 17 Feb 2013 19:20:19 GMT
@@ -466,7 +468,7 @@ Returns number of items in cart
 
 #### example response
 
-```ini
+```
 HTTP/1.1 200 OK
 Server: FinalStore
 Date: Sun, 17 Feb 2013 19:20:19 GMT
@@ -489,7 +491,7 @@ Returns number of items in cart and cart value
 
 #### example response
 
-```ini
+```
 HTTP/1.1 200 OK
 Server: FinalStore
 Date: Sun, 17 Feb 2013 19:20:19 GMT
@@ -515,7 +517,7 @@ Returns products in the shopping cart
 
 #### example response
 
-```ini
+```
 HTTP/1.1 200 OK
 Server: FinalStore
 Date: Sun, 17 Feb 2013 19:20:19 GMT
@@ -641,7 +643,7 @@ Insert product into cart
 
 #### example response data
 
-```ini
+```
 HTTP/1.1 201 Created
 Server: FinalStore
 Location: http://finalstore.net/api/users/1/cart/products/3
@@ -711,7 +713,7 @@ Update product in cart
 
 #### example response
 
-```ini
+```
 HTTP/1.1 201 Created
 Server: FinalStore
 Location: http://finalstore.net/api/users/1/cart/products/3
@@ -774,7 +776,7 @@ Removes item from cart
 
 #### example response
 
-```ini
+```
 HTTP/1.1 200 OK
 Server: FinalStore
 Etag: "2-80f57c5f774082b3d3f06ff0471b835e"
@@ -801,9 +803,6 @@ Cache-Control: must-revalidate
 
 {"error": "bad_request", "reason": "cart_product_missing"}
 ```
-
-
-## Categories
 
 
 # Interesting links

@@ -14,7 +14,7 @@ If limit is specified only {limit} users will be returned
 
 #### example response data
 
-```ini
+```
 HTTP/1.1 200 OK
 Transfer-Encoding: chunked
 Server: FinalServer
@@ -55,7 +55,7 @@ Returns the user with given id or 404 if user does not exists
 
 #### example success response
 
-```ini
+```
 HTTP/1.1 200 OK
 Server: FinalServer
 Etag: "1-11f6035f13a60194d8f020b7bd1b1dc1"
@@ -72,7 +72,7 @@ Cache-Control: must-revalidate
 
 #### example failure response
 
-```ini
+```
 HTTP/1.1 404 Not Found
 Server: FinalStore
 Date: Wed, 13 Feb 2013 20:34:36 GMT
@@ -110,7 +110,7 @@ will be created.
 
 #### example response
 
-```ini
+```
 HTTP/1.1 201 Created
 Server: FinalStore
 Location: http://finalstore.net/api/users/1
@@ -140,7 +140,7 @@ modify or create user with id = {id}
 
 #### example response data
 
-```ini
+```
 HTTP/1.1 201 Created
 Server: FinalStore
 Location: http://finalstore.net/api/users/1
@@ -168,7 +168,7 @@ Removes user from a store.
 
 #### example response
 
-```ini
+```
 HTTP/1.1 200 OK
 Server: FinalStore
 Etag: "2-80f57c5f774082b3d3f06ff0471b835e"
@@ -185,7 +185,7 @@ Cache-Control: must-revalidate
 
 #### possible error responses
 
-```ini
+```
 HTTP/1.1 404 Not Found
 Server: FinalStore
 Date: Wed, 13 Feb 2013 20:41:55 GMT
@@ -197,7 +197,7 @@ Cache-Control: must-revalidate
 ```
 
 
-```ini
+```
 HTTP/1.1 401 Unauthorized
 Server: FinalStore
 Date: Wed, 13 Feb 2013 20:41:55 GMT
@@ -209,7 +209,7 @@ Cache-Control: must-revalidate
 ```
 
 
-```ini
+```
 HTTP/1.1 403.3 Forbidden
 Server: FinalStore
 Date: Wed, 13 Feb 2013 20:41:55 GMT

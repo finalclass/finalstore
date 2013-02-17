@@ -2,7 +2,7 @@
 
 ### ACL related possible errors
 
-```ini
+```
 HTTP/1.1 401 Unauthorized
 Server: FinalStore
 Date: Wed, 13 Feb 2013 20:41:55 GMT
@@ -14,7 +14,7 @@ Cache-Control: must-revalidate
 ```
 
 
-```ini
+```
 HTTP/1.1 403.3 Forbidden
 Server: FinalStore
 Date: Wed, 13 Feb 2013 20:41:55 GMT
@@ -46,7 +46,7 @@ Returns whole cart
 
 ### example response
 
-```ini
+```
 HTTP/1.1 200 OK
 Server: FinalStore
 Date: Sun, 17 Feb 2013 19:20:19 GMT
@@ -86,7 +86,7 @@ Returns total value of all products placed in a shopping cart
 
 #### example response
 
-```ini
+```
 HTTP/1.1 200 OK
 Server: FinalStore
 Date: Sun, 17 Feb 2013 19:20:19 GMT
@@ -109,7 +109,7 @@ Returns number of items in cart
 
 #### example response
 
-```ini
+```
 HTTP/1.1 200 OK
 Server: FinalStore
 Date: Sun, 17 Feb 2013 19:20:19 GMT
@@ -132,7 +132,7 @@ Returns number of items in cart and cart value
 
 #### example response
 
-```ini
+```
 HTTP/1.1 200 OK
 Server: FinalStore
 Date: Sun, 17 Feb 2013 19:20:19 GMT
@@ -158,7 +158,7 @@ Returns products in the shopping cart
 
 #### example response
 
-```ini
+```
 HTTP/1.1 200 OK
 Server: FinalStore
 Date: Sun, 17 Feb 2013 19:20:19 GMT
@@ -284,7 +284,7 @@ Insert product into cart
 
 #### example response data
 
-```ini
+```
 HTTP/1.1 201 Created
 Server: FinalStore
 Location: http://finalstore.net/api/users/1/cart/products/3
@@ -354,7 +354,7 @@ Update product in cart
 
 #### example response
 
-```ini
+```
 HTTP/1.1 201 Created
 Server: FinalStore
 Location: http://finalstore.net/api/users/1/cart/products/3
@@ -417,7 +417,7 @@ Removes item from cart
 
 #### example response
 
-```ini
+```
 HTTP/1.1 200 OK
 Server: FinalStore
 Etag: "2-80f57c5f774082b3d3f06ff0471b835e"
