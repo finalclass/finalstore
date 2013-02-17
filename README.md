@@ -8,7 +8,7 @@ For handling http it will use [express.js](http://expressjs.com/) framework.
 FinalStore is an OpenSource project, 
 distributed under **MIT** or **GPL** license (you can choose which license better suits your needs).
 
-Please checkout the docs folder. Now all the work is on creating the interface.
+Please checkout the docs folder. Now all the focus is on creating the documentation. Implementation will be the last step.
 
 # Milestones
 
