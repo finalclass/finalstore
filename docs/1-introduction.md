@@ -33,10 +33,6 @@ For example: request for getting all the users in html format could look like th
 
 `GET /api/users.html`
 
-however getting only 10 first users as html: 
-
-`GET /api/users.html?limit=10`
-
 Possible formats are: **json, xml, html**
 
 **default is json** so you are not obliged to specify format suffix.
@@ -57,7 +53,7 @@ For this purpuse FinalStore offers selectors.
 If you just need cart price and number of items in cart
 you could make a request like that: 
 
-`GET /api/users/1/cart(price,quantity).json`
+`GET /api/users/1/cart.json?select=(price,quantity)`
 
 Which could produce the response:
 
@@ -81,7 +77,7 @@ This method works on all all resources.
 
 You can even use it on colletions. For example: 
 
-`GET /api/users(email).json` 
+`GET /api/users.json?select=(email)`
 
 will return array of emails
 
@@ -110,11 +106,11 @@ If you want to get this kind of user data:
 
 You would write this request: 
 
-`GET /api/users/2(email,cart(quantity,products(id,quantity))).json`
+`GET /api/users/2(email,cart.json?select=(quantity,products(id,quantity)))`
 
 Nesting also works with collections, so 
 
-`GET /api/users(email,cart(price)).json` 
+`GET /api/users.json?select=(email,cart(price))` 
 
 could produce:
 
@@ -134,3 +130,79 @@ could produce:
     }
 ]
 ```
+
+## Filtering results
+
+It's possible to set the condition, so that only resources that satisfy the condition will be sent.
+Conditions can be set using the `where` query part.
+
+For example:
+
+`GET /api/users.json?where=(email,email%40example.com)`
+
+Will send only users with email equal to email@example.com
+
+### LIKE operator example
+
+If you would like to get all the users with emails from domain example.com you could create this url:
+
+`GET /api/users.json?where=(email,*example.com)`
+
+This will output all the users with emails parked at example.com domain.
+
+### IN operator example
+
+If you would like to get let's say 2 users, one with id equal to 3, and the other with id equal to 9 you could create this url:
+
+`GET /api/users.json?where=(id,3,9)`
+
+You can place as much values as you want in the round brackets. First value is the field name, and every proceding parameter is a possible value;
+
+### AND operator example
+
+Select every product from cart with name that starts from "foo" AND quantity is 2:
+
+`GET /api/users/2/cart/products.json?whwere=(name,foo*)*(quantity,2)`
+
+"*" between round brackets means AND
+
+### OR operator example
+
+Select every product from cart which name starts from "foo" OR quantity is 2:
+
+`GET /api/users/2/cart/products.json?whwere=(name,foo*)+(quantity,2)`
+
+"+" between round brackets means OR
+
+### Greater then example
+
+Get every product from cart which quantity is greater then 4:
+
+`GET /api/users/2/cart/products.json?where=(quantity,gt$4)`
+
+### Lower then example
+
+Get every product from cart which quantity is lower then 4:
+
+`GET /api/users/2/cart/products.json?where=(quantity,lt$4)`
+
+### Between example
+
+Get every product from cart which quantity is lower then 4 and greater then 2:
+
+`GET /api/users/2/cart/products.json?where=(quantity,gt$2,lt$4)`
+
+### Greater equal and lower equal example
+
+Get every product from cart which quantity is lower or equal 4 and greater or equal 2:
+
+`GET /api/users/2/cart/products.json?where=(quantity,ge$2,le$4)`
+
+### Complex condition example
+
+Get shopping cart content 
+if there is more then 5 products in cart 
+OR
+there is a product which quantity is greater then 2 AND its price is greater then 100
+
+`GET /api/users/2/cart.json?where=(quantity,gt$5)+((products.quantity,gt$2)*(products.price,gt$100))`
