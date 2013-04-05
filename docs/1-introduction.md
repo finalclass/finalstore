@@ -1,10 +1,10 @@
-# FinalStore API
+# MTS-Project API
 
-FinalStore is a RESTful API for typical online store.
+MTS-Project is a RESTful API for typical online store.
 It is written in [node.js](http://nodejs.org/).
 For handling http it uses [express.js](http://expressjs.com/) framework.
 
-FinalStore is an OpenSource project, 
+MTS-Project is an OpenSource project,
 distributed under **MIT** or **GPL** license (you can choose which license better suits your needs).
 
 ## Generally about the API
